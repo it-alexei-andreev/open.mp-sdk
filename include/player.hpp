@@ -543,6 +543,12 @@ struct IPlayer : public IExtensible, public IEntity
 	/// Get the player's serial (gpci)
 	virtual StringView getSerial() const = 0;
 
+	/// Set the player's tag ID
+	virtual void setTag(uint8_t tag) = 0;
+
+	/// Get the player's tag ID
+	virtual uint8_t getTag() const = 0;
+
 	/// Give a weapon to the player
 	virtual void giveWeapon(WeaponSlotData weapon) = 0;
 
