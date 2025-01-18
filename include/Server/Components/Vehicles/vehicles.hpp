@@ -266,6 +266,15 @@ struct IVehicle : public IExtensible, public IEntity
 	/// Returns the passengers of the vehicle
 	virtual const FlatHashSet<IPlayer*>& getPassengers() = 0;
 
+	/// Returns the passengers (actors) of the vehicle
+	virtual const FlatHashSet<IActor*>& getActors() = 0;
+
+	/// Add the passengers (actors) to the vehicle
+	virtual void addActor(IActor* actor) = 0;
+
+	/// Remove the passengers (actors) to the vehicle
+	virtual void removeActor(IActor* actor) = 0;
+
 	/// Sets the vehicle's number plate
 	virtual void setPlate(StringView plate) = 0;
 
