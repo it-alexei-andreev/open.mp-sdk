@@ -60,6 +60,12 @@ struct IConsoleComponent : public IComponent
 {
 	PROVIDE_UID(ConsoleComponent_UID);
 
+	/// Set the ConsoleMessageHandler for RCON
+	virtual void setRconHandler(ConsoleMessageHandler* handler) = 0;
+	
+	/// Get the ConsoleMessageHandler of RCON
+	virtual ConsoleMessageHandler* getRconHandler() = 0;
+
 	/// Get the ConsoleEventHandler event dispatcher
 	virtual IEventDispatcher<ConsoleEventHandler>& getEventDispatcher() = 0;
 
